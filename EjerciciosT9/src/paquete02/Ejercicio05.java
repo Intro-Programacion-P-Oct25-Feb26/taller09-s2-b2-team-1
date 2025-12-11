@@ -17,8 +17,17 @@ public class Ejercicio05 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      
-
+        Scanner entrada = new Scanner(System.in);
+        String reporte = "";
+        int[] ventas = new int[5];
+        String[] dias = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes"};
+        for (int i = 0; i < ventas.length; i++) {
+            System.out.printf("Ingrese el numero de ventas del dia %s:\n",
+                    dias[i]);
+            ventas[i] = entrada.nextInt();
+            reporte = String.format("%s- %s $%s\n",
+                    reporte, dias[i], ventas[i]);
+        }
+        System.out.printf("%s\n", reporte);
     }
-
 }
